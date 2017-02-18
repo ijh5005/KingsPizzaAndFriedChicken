@@ -5,9 +5,9 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
-h1 {
+.banner {
 	color: red;
-    	display: block;
-    	font-size: 4em;
-    	text-align: center;
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
 }
