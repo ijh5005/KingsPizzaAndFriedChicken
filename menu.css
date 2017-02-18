@@ -6,8 +6,33 @@ body {
 }
 
 .banner {
-	color: red;
+	color: #FE2020;
     font-size: 4em;
     text-align: center;
     font-weight: bold;
+}
+
+#option {
+	color: #FE2020;
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#mainMenu {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.4em;
+}
+
+.option {
+	align-items: center;
+	border-bottom: 2px solid #FE2020;
+    border-right: 2px solid #FE2020;
+    border-radius: 10px;
+    display: flex;
+    height: 142px;
+    justify-content: center;
+    margin: 46px auto;
+    width: 570px;
 }
