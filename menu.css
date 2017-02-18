@@ -2,9 +2,9 @@ body {
 	background-image: url(img/black.jpg);
 	background-repea: no-repeat;
 	background-size: 100vw 100vh;
+	font-family: 'Assistant', sans-serif;
 }
 
 h1 {
 	color: red;
-	
 }
