@@ -5,11 +5,18 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
+#dish {
+	height: 35vh;
+}
 .banner {
+	align-items: center;
 	color: #FE2020;
+	display: flex;
     font-size: 4em;
-    text-align: center;
     font-weight: bold;
+    height: 10vh;
+    justify-content: center;
+    text-align: center;
 }
 
 #option {
@@ -19,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    height: 80vh;
+    height: 50vh;
 }
 
 #mainMenu {
@@ -35,6 +42,6 @@ body {
     display: flex;
     height: 142px;
     justify-content: center;
-    margin: 46px 0;
+    margin: 26px 0;
     width: 570px;
 }
