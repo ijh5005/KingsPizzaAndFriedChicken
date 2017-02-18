@@ -17,21 +17,21 @@ body {
 	align-items: center;
 	color: #FE2020;
 	display: flex;
-    font-size: 4em;
-    font-weight: bold;
-    height: 10vh;
-    justify-content: center;
-    text-align: center;
+	font-size: 4em;
+	font-weight: bold;
+	height: 10vh;
+	justify-content: center;
+	text-align: center;
 }
 
 #option {
 	color: #FE2020;
 	display: flex;
-    font-size: 3.5em;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    height: 50vh;
+	font-size: 3.5em;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	height: 50vh;
 }
 
 #mainMenu {
@@ -42,10 +42,10 @@ body {
 .option {
 	align-items: center;
 	background-color: black;
-    border-radius: 10px;
-    display: flex;
-    height: 142px;
-    justify-content: center;
-    margin: 26px 0;
-    width: 570px;
+    	border-radius: 10px;
+    	display: flex;
+    	height: 142px;
+    	justify-content: center;
+    	margin: 26px 0;
+    	width: 570px;
 }
