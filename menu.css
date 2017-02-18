@@ -9,7 +9,6 @@ body {
 	background-image: url(img/mainMenuPic.jpg);
 	background-repeat: no-repeat;
 	background-size: 100vw 35vh;
-	border: 3px solid #FE2020;
 	border-radius: 12px;
 	height: 35vh;
 }
@@ -34,12 +33,12 @@ body {
     height: 50vh;
 }
 
-#phone,
-#clock,
+#car,
+#pizza,
 #location,
 #inspiration {
 	background-color: #CCC;
-	background-image: url(icon/phone.png);
+	background-image: url(icon/car.png);
 	background-position: center; 
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
@@ -49,8 +48,8 @@ body {
     width: 1.4em;
 }
 
-#clock {
-	background-image: url(icon/clock.png);
+#pizza {
+	background-image: url(icon/pizza.png);
 }
 
 #location {
@@ -71,9 +70,9 @@ body {
 	background-color: black;
     border-radius: 10px;
     display: flex;
-    height: 142px;
+    height: 3.4em;
     justify-content: flex-start;
-    margin: 26px 0;
+    margin: 5px 0;
     padding: 0 1em;
     width: 570px;
 }
