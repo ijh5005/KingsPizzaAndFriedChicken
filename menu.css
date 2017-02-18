@@ -14,15 +14,17 @@ body {
 
 #option {
 	color: #FE2020;
+	display: flex;
     font-size: 3.5em;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
+    height: 80vh;
 }
 
 #mainMenu {
 	display: flex;
 	flex-direction: column;
-	margin-top: 1.4em;
 }
 
 .option {
@@ -33,6 +35,6 @@ body {
     display: flex;
     height: 142px;
     justify-content: center;
-    margin: 46px auto;
+    margin: 46px 0;
     width: 570px;
 }
