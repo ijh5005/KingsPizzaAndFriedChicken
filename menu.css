@@ -64,6 +64,7 @@ body {
 #mainMenu {
 	display: flex;
 	flex-direction: column;
+	overflow:auto;
 }
 
 .option {
