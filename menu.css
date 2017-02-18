@@ -6,6 +6,11 @@ body {
 }
 
 #dish {
+	background-image: url(img/mainMenuPic.jpg);
+	background-repea: no-repeat;
+	background-size: 100vw 35vh;
+	border: 3px solid #FE2020;
+	border-radius: 12px;
 	height: 35vh;
 }
 .banner {
