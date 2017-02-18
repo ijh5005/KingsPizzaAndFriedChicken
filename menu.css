@@ -42,11 +42,11 @@ body {
 .option {
 	align-items: center;
 	border-bottom: 2px solid #FE2020;
-    border-right: 2px solid #FE2020;
-    border-radius: 10px;
-    display: flex;
-    height: 142px;
-    justify-content: center;
-    margin: 26px 0;
-    width: 570px;
+	border-right: 2px solid #FE2020;
+	border-radius: 10px;
+	display: flex;
+	height: 142px;
+	justify-content: center;
+	margin: 26px 0;
+	width: 570px;
 }
