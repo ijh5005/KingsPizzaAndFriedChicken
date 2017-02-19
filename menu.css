@@ -29,7 +29,7 @@ body {
 	-webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
-    transition: all 1s ease;
+    transition: all 0.25s ease;
 }
 
 .locationImg {
@@ -40,12 +40,8 @@ body {
 	background-image: url(img/review.jpg);
 }
 
-.pickupImg {
-	background-image: url(img/pickup.jpg);
-}
-
-.deliverImg {
-	background-image: url(img/deliver.jpg);
+.orderImg {
+	background-image: url(img/order.jpg);
 }
 
 .menuImg {
@@ -56,8 +52,10 @@ body {
 	align-items: center;
 	color: #FE2020;
 	display: flex;
+	font-family: 'Playfair Display SC', serif;
     font-size: 4em;
-    font-weight: bold;
+    font-weight: 900;
+    font-style: italic;
     height: 10vh;
     justify-content: center;
     margin-bottom: 0.1em;
@@ -103,7 +101,7 @@ body {
     display: none;
     font-size: 2.6rem;
     height: 38vh;
-    line-height: 0.01;
+    line-height: 0.3;
     padding: 1em 2em 2em 2em;
     width: 80vw;
 }
@@ -123,10 +121,10 @@ body {
 	left: 2px;
 }
 
-#car,
-#pizza,
-#location,
-#review {
+#carIcon,
+#pizzaIcon,
+#locationIcon,
+#reviewIcon {
 	background-color: #CCC;
 	background-image: url(icon/car.png);
 	background-position: center; 
@@ -138,15 +136,15 @@ body {
     width: 1.4em;
 }
 
-#pizza {
+#pizzaIcon {
 	background-image: url(icon/pizza.png);
 }
 
-#location {
+#locationIcon {
 	background-image: url(icon/location.png);
 }
 
-#review {
+#reviewIcon {
 	background-image: url(icon/review.png);
 }
 

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>King Pizza and Fried Chicken</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,900i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Assistant:200" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="menu.css">
 </head>
@@ -14,14 +15,28 @@
 	<div class="banner"><span>King's Pizza and Fried Chicken</span></div>
 
 	<div id="select">
-		<div id="mainMenu">
-			<div class="option" data="delivery"><div id="car"></div><div>DELIVERY</div></div>
-			<div class="option" data="pickup"><div id="pizza"></div><div>PICK UP</div></div>
-			<div class="option" data="location"><div id="location"></div><div>LOCATION</div></div>
-			<div class="option" data="review"><div id="review"></div><div>REVIEWS</div></div>
-		</div>
+		<div id="mainMenu" data="true">
+			<div id="delivery" class="option">
+				<div id="carIcon"></div>
+				<div>DELIVERY</div>
+			</div>
+			<div id="pickup" class="option">
+				<div id="pizzaIcon"></div>
+				<div>PICK UP</div>
+			</div>
+			<div id="location" class="option">
+				<div id="locationIcon"></div>
+				<div>LOCATION</div>
+			</div>
+			<div id="reviews" class="option">
+				<div id="reviewIcon"></div>
+				<div>REVIEWS</div>
+			</div>
+		</div> <!-- end menu -->
 
-		<div id="menuPage"></div>
+		<div id="menuPage">
+			<div></div>
+		</div>
 
 		<div id="locationPage">
 			<h2>LOCATION</h2>
@@ -55,12 +70,12 @@
 					</ul>	
 				</div>
 			</div>
-		</div>
+		</div> <!-- end #locationPage -->
 		<div id="reviewPage">
 			<div id="avgRate">
 				<div>
 					<div id="currentRatePosition">
-						<div id="currentRate"><span>3</span></div>
+						<div id="currentRate"><span>4</span></div>
 						<div id="rateText">
 							<p>Out of</p>
 							<p>5 Stars</p>
@@ -71,7 +86,7 @@
 						<div class="star"></div>
 						<div class="star"></div>
 						<div class="star"></div>
-						<div class="star"></div>
+						<div class="starBlack"></div>
 					</div>
 				</div>
 				<div>
@@ -111,8 +126,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div> <!-- end #reviewPage -->
+	</div> <!-- end #select -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="menu.js"></script>
