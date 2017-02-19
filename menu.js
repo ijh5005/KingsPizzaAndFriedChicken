@@ -10,7 +10,6 @@ $(document).ready( function () {
 				displayImgClass: "orderImg",
 				current: "menuPage",
 				previous: "mainMenu",
-				next: {}
 			},
 		},
 		pickup: {
@@ -20,7 +19,6 @@ $(document).ready( function () {
 				displayImgClass: "orderImg",
 				current: "menuPage",
 				previous: "mainMenu",
-				next: {}
 			},
 		},
 		location: {
@@ -30,7 +28,6 @@ $(document).ready( function () {
 				displayImgClass: "locationImg",
 				current: "locationPage",
 				previous: "mainMenu",
-				next: {}
 			},
 		},
 		reviews: {
@@ -40,7 +37,6 @@ $(document).ready( function () {
 				displayImgClass: "reviewImg",
 				current: "reviewPage",
 				previous: "mainMenu",
-				next: {}
 			},
 		}
 	};
@@ -103,14 +99,94 @@ $(document).ready( function () {
 
 			}
 		}, 1000);
-		//cache curent page
-		//var current = $(this).attr("id");
-		//cache previuos age
-		//var previuos = $(this).
-			// $(".active").css("display", "none");
-			// $("#mainMenu").css("right", 0).fadeIn("slow");
-			// $(".dish").attr("class", "").addClass("dish").addClass("menuImg");
-			// $("#back").fadeOut();
 	});
 
+	var menu = [
+
+		{
+			item: "pizza",
+			id: 1,
+		},
+		{
+			item: "stromboli",
+			id: 2,
+		},
+		{
+			item: "chicken",
+			id: 3,
+		},
+		{
+			item: "burger bin",
+			id: 4,
+		},
+		{
+			item: "salad",
+			id: 5,
+		},
+		{
+			item: "club",
+			id: 6,
+		},
+		{
+			item: "wraps",
+			id: 7,
+		},
+		{
+			item: "hoagies",
+			id: 8,
+		},
+		{
+			item: "platters",
+			id: 9,
+		},
+		{
+			item: "sandwiches",
+			id: 10,
+		},
+		{
+			item: "seafood",
+			id: 11,
+		},
+		{
+			item: "sides",
+			id: 12,
+		},
+		{
+			item: "desserts",
+			id: 13,
+		},
+		{
+			item: "appetizers",
+			id: 14,
+		},
+		{
+			item: "soup",
+			id: 15,
+		},
+		{
+			item: "extras",
+			id: 16,
+		},
+		{
+			item: "kids menu",
+			id: 17,
+		},
+	]; // end: var menu = {}
+
+	//populate page with group list
+	var groups = function () {
+		//markup var
+		var markup  = "";
+		//cache menu length
+		var l = Object.keys(menu).length;
+		//loop throught object to populate
+		for( var i = 0; i < l; i++){
+			markup += "<div class='menuOption'><span>" + menu[i].item + "</span></div>";
+		}
+		$("#menuPage").html(markup);
+	}
+
+	$("#delivery, #pickup").click( function () {
+		groups();
+	});
 });
