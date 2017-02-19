@@ -5,7 +5,8 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
-#back {
+#back,
+#checkout {
 	background-color: #CCC;
 	background-image: url(icon/back.png);
 	background-position: center; 
@@ -21,6 +22,13 @@ body {
 	width: 6em;
 }
 
+#checkout {
+	background-image: url(icon/checkout.png);
+	display: block;
+	left: 88vw;
+}
+
+/******************* main menu *******************/
 .dish {
 	background-repeat: no-repeat;
 	background-size: 100vw 35vh;
@@ -72,6 +80,8 @@ body {
     height: 50vh;
 }
 
+/******************* main menu *******************/
+
 #mainMenu,
 #locationPage,
 #reviewPage,
@@ -92,33 +102,6 @@ body {
     margin: 0.25vh 0;
     padding: 0 1em;
     width: 570px;
-}
-
-#locationPage,
-#reviewPage,
-#menuPage {
-    background-color: black;
-    display: none;
-    font-size: 2.6rem;
-    height: 38vh;
-    line-height: 0.3;
-    padding: 1em 2em 2em 2em;
-    width: 80vw;
-}
-
-.hoursList {
-	display: inline-block;
-	width: 46%;
-}
-
-#locationPage ul {
-	line-height: 1;
-	list-style: none;
-}
-
-#locationPage ul span{
-	position: relative;
-	left: 2px;
 }
 
 #carIcon,
@@ -148,6 +131,42 @@ body {
 	background-image: url(icon/review.png);
 }
 
+/******************* end: main menu *******************/
+
+
+
+#locationPage,
+#reviewPage,
+#menuPage {
+    background-color: black;
+    display: none;
+    font-size: 2.6rem;
+    height: 38vh;
+    line-height: 0.3;
+    padding: 1em 2em 2em 2em;
+    width: 80vw;
+}
+
+/******************* location page *******************/
+.hoursList {
+	display: inline-block;
+	width: 46%;
+}
+
+#locationPage ul {
+	line-height: 1;
+	list-style: none;
+}
+
+#locationPage ul span{
+	position: relative;
+	left: 2px;
+}
+/******************* end: location page *******************/
+
+
+
+/******************* review page *******************/
 #currentRatePosition {
 	display: flex;
 	justify-content: center;
@@ -210,4 +229,27 @@ body {
     height: 7em;
     justify-content: center;
     border: 2px solid #CCC;
+}
+
+/******************* end: review page *******************/
+
+
+
+/******************* menu page *******************/
+.menuOption {
+	align-items: center;
+    background-color: black;
+    border: 0.5vw solid #CCC;
+    border-radius: 10px;
+    display: flex;
+    float: left;
+    height: 12vh;
+    justify-content: center;
+    margin: 0.25vh 0.25vw;
+    padding: 0 0.1em;
+    width: 37vw;
+}
+
+.menuOption span {
+	font-size: 1.76em;
 }
