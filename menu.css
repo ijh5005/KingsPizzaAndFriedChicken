@@ -5,13 +5,22 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
-#dish {
+.dish {
 	background-image: url(img/mainMenuPic.jpg);
 	background-repeat: no-repeat;
 	background-size: 100vw 35vh;
 	border-radius: 12px;
 	height: 35vh;
 }
+
+.locationImg {
+	background-image: url(img/location.jpg);
+}
+
+.reviewImg {
+	background-image: url(img/review.jpg);
+}
+
 .banner {
 	align-items: center;
 	color: #FE2020;
@@ -34,10 +43,55 @@ body {
     height: 50vh;
 }
 
+#mainMenu,
+#locationPage,
+#reviewPage {
+	display: flex;
+	flex-direction: column;
+	overflow:auto;
+}
+
+.option {
+	align-items: center;
+	background-color: black;
+    border-radius: 10px;
+    display: flex;
+    height: 12vh;
+    justify-content: flex-start;
+    margin: 0.25vh 0;
+    padding: 0 1em;
+    width: 570px;
+}
+
+#locationPage,
+#reviewPage {
+    background-color: black;
+    font-size: 2.6rem;
+    height: 38vh;
+    line-height: 0.01;
+    padding: 1em 2em 2em 2em;
+    width: 80vw;
+}
+
+.hoursList {
+	display: inline-block;
+	width: 46%;
+}
+
+#locationPage ul {
+	line-height: 1;
+	list-style: none;
+}
+
+#locationPage ul span{
+	position: relative;
+	left: 2px;
+}
+
 #car,
 #pizza,
 #location,
-#inspiration {
+#review {
 	background-color: #CCC;
 	background-image: url(icon/car.png);
 	background-position: center; 
@@ -57,24 +111,70 @@ body {
 	background-image: url(icon/location.png);
 }
 
-#inspiration {
-	background-image: url(icon/inspiration.png);
+#review {
+	background-image: url(icon/review.png);
 }
 
-#mainMenu {
+#currentRatePosition {
 	display: flex;
-	flex-direction: column;
-	overflow:auto;
+	justify-content: center;
 }
 
-.option {
-	align-items: center;
-	background-color: black;
-    border-radius: 10px;
+#currentRate,
+#rateText {
+    height: 5em;
+    width: 5em;
     display: flex;
-    height: 12vh;
-    justify-content: flex-start;
-    margin: 0.25vh 0;
-    padding: 0 1em;
-    width: 570px;
+    align-items: center;
+    justify-content: center;
+}
+#rateText {
+    flex-direction: column;
+}
+
+#currentRate span {
+	font-size: 5em;
+}
+
+#rateText p {
+	font-size: 1.4em;
+	margin: 1.625rem;
+}
+
+#starDisplay,
+#starDisplayReview {
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	height: 2em;
+	justify-content: center;
+}
+
+#starDisplayReview {
+	background-color: #CCC;
+	margin-top: 0.5em;
+}
+
+.star {
+	background-image: url(icon/star.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2em 2em;
+    width: 2em;
+}
+
+.starBlack {
+	background-image: url(icon/starBlack.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2em 2em;
+    width: 2em;
+}
+
+#comment {
+	display: flex;
+    align-items: center;
+    height: 7em;
+    justify-content: center;
+    border: 2px solid #CCC;
 }
