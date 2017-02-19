@@ -14,17 +14,22 @@ body {
 	border-radius: 50px;
 	display: none;
 	height: 6em;
+	left: 1em;
 	opacity: 0.6;
 	position: absolute;
+	top: 1em;
 	width: 6em;
 }
 
 .dish {
-	background-image: url(img/mainMenuPic.jpg);
 	background-repeat: no-repeat;
 	background-size: 100vw 35vh;
 	border-radius: 12px;
 	height: 35vh;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .locationImg {
@@ -33,6 +38,18 @@ body {
 
 .reviewImg {
 	background-image: url(img/review.jpg);
+}
+
+.pickupImg {
+	background-image: url(img/pickup.jpg);
+}
+
+.deliverImg {
+	background-image: url(img/deliver.jpg);
+}
+
+.menuImg {
+	background-image: url(img/mainMenuPic.jpg);
 }
 
 .banner {
