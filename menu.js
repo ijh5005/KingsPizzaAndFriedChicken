@@ -53,6 +53,7 @@ $(document).ready( function () {
 			$(".active").css("display", "none");
 			$("#mainMenu").css("right", 0).fadeIn("slow");
 			$(".dish").attr("class", "").addClass("dish").addClass("menuImg");
+			$("#back").fadeOut();
 		}
 	});
 
