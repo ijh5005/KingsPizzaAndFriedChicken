@@ -5,6 +5,20 @@ body {
 	font-family: 'Assistant', sans-serif;
 }
 
+#back {
+	background-color: #CCC;
+	background-image: url(icon/back.png);
+	background-position: center; 
+	background-repeat: no-repeat;
+	border: solid;
+	border-radius: 50px;
+	display: none;
+	height: 6em;
+	opacity: 0.6;
+	position: absolute;
+	width: 6em;
+}
+
 .dish {
 	background-image: url(img/mainMenuPic.jpg);
 	background-repeat: no-repeat;
@@ -45,10 +59,12 @@ body {
 
 #mainMenu,
 #locationPage,
-#reviewPage {
+#reviewPage,
+#menuPage {
 	display: flex;
 	flex-direction: column;
 	overflow:auto;
+	position: relative;
 }
 
 .option {
@@ -64,8 +80,10 @@ body {
 }
 
 #locationPage,
-#reviewPage {
+#reviewPage,
+#menuPage {
     background-color: black;
+    display: none;
     font-size: 2.6rem;
     height: 38vh;
     line-height: 0.01;

@@ -7,18 +7,23 @@
 </head>
 <body>
 
+	<div id="back"></div>
+
 	<div class="dish"></div>
 
 	<div class="banner"><span>King's Pizza and Fried Chicken</span></div>
 
 	<div id="select">
 		<div id="mainMenu">
-			<div class="option"><div id="car"></div><div>DELIVERY</div></div>
-			<div class="option"><div id="pizza"></div><div>PICK UP</div></div>
-			<div class="option"><div id="location"></div><div>LOCATION</div></div>
-			<div class="option"><div id="review"></div><div>REVIEWS</div></div>
+			<div class="option" data="delivery"><div id="car"></div><div>DELIVERY</div></div>
+			<div class="option" data="pickup"><div id="pizza"></div><div>PICK UP</div></div>
+			<div class="option" data="location"><div id="location"></div><div>LOCATION</div></div>
+			<div class="option" data="review"><div id="review"></div><div>REVIEWS</div></div>
 		</div>
-		<div id="locationPage" style="display: none;">
+
+		<div id="menuPage"></div>
+
+		<div id="locationPage">
 			<h2>LOCATION</h2>
 			<p>1432 E High St, Pottstown, PA 19464</p>
 			<h2>Contact</h2>
@@ -51,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="reviewPage" style="display: none;">
+		<div id="reviewPage">
 			<div id="avgRate">
 				<div>
 					<div id="currentRatePosition">
@@ -109,6 +114,7 @@
 		</div>
 	</div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 </body>
 </html>
