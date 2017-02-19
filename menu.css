@@ -22,7 +22,7 @@ body {
 	width: 6em;
 }
 
-#checkout {
+#checkout { 
 	background-image: url(icon/checkout.png);
 	display: block;
 	left: 88vw;
