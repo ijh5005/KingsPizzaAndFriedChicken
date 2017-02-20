@@ -101,7 +101,7 @@ body {
     justify-content: flex-start;
     margin: 0.25vh 0;
     padding: 0 1em;
-    width: 570px;
+    width: 58vw;
 }
 
 #carIcon,
@@ -252,4 +252,38 @@ body {
 
 .menuOption span {
 	font-size: 1.76em;
+}
+
+.menuOptionListPosition {
+    align-items: center;
+	display: flex;
+    flex-direction: column;
+}
+
+.menuOptionList {
+    align-items: center;
+    background-color: black;
+    border: solid #CCC;
+    border-radius: 10px;
+    display: flex;
+    height: 12vh;
+    justify-content: flex-start;
+    margin: 0.25vh 0;
+    padding: 0 1em;
+    width: 77vw;
+}
+
+.price {
+	align-items: center;
+	border: solid #CCC;
+    border-radius: 100px;
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    margin-right: 1em;
+    width: 3em;
+}
+
+.itemdescr {
+	line-height: 1;
 }

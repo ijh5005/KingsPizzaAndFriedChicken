@@ -65,6 +65,7 @@ $(document).ready( function () {
 				setTimeout( function () {
 					//update branch.path
 					branch.path += currentPage + ".next.";
+					ready();
 				}, 1500);
 			}
 		}); // end: $("#"+Track[currentPage]).animate
@@ -89,7 +90,6 @@ $(document).ready( function () {
 			$("#"+branch.path+"").parent().fadeIn();
 			if ( $("#"+branch.path+"").parent().attr("id") === "mainMenu" ){
 				$("#mainMenu").attr("data", "true");
-				console.log("true");
 			}
 			if ( $("#mainMenu").attr("data") === "true" ){
 				branch.path = "";
@@ -106,6 +106,103 @@ $(document).ready( function () {
 		{
 			item: "pizza",
 			id: 1,
+			options: [
+				{
+					name:"Plain Pizza",
+					cost:"$7.99",
+					descr:""
+				},
+				{
+					name:"White Pizza",
+					cost:"$7.99",
+					descr:""
+				},
+				{
+					name:"Cheddar Supreme Pizza",
+					cost:"$13.99",
+					descr:"Cheddar cheese, sauce, ham, bacon, onions, and mozzarella cheese."
+				},
+				{
+					name:"Hawaiian Pizza",
+					cost:"$13.99",
+					descr:"Ham and pineapple."
+				},
+				{
+					name:"Florentina Pizza",
+					cost:"$13.99",
+					descr:"White pizza topped with spinach, ricotta, and tomatoes."
+				},
+				{
+					name:"Four Cheese Pizza",
+					cost:"$13.99",
+					descr:"Provolone, mozzarella, cheddar, and Parmesan."
+				},
+				{
+					name:"Broccoli Cheddar Pizza",
+					cost:"$13.99",
+					descr:"Mozzarella, broccoli, and cheddar."
+				},
+				{
+					name:"King Supreme Pizza",
+					cost:"$14.99",
+					descr:"Pepperoni, sausage, mushrooms, green peppers, onions, and black olives."
+				},
+				{
+					name:"Meat Lovers Pizza",
+					cost:"$14.99",
+					descr:"Pepperoni, bacon, ham, sausage, meatballs, and salami."
+				},
+				{
+					name:"Vegetable Supreme Pizza",
+					cost:"$14.99",
+					descr:"Tomatoes, onions, green peppers, black olives, mushrooms, spinach, and broccoli."
+				},
+				{
+					name:"Buffalo Chicken Pizza",
+					cost:"$14.99",
+					descr:"Marinated chicken in wing sauce."
+				},
+				{
+					name:"BBQ Chicken Pizza",
+					cost:"$14.99",
+					descr:"Marinated chicken in BBQ sauce."
+				},
+				{
+					name:"Bacon Cheddar Cheeseburger Pizza",
+					cost:"$14.99",
+					descr:"Bacon, meatball, cheddar, mozzarella cheese, and sauce."
+				},
+				{
+					name:"Chicken Cordon Bleu Pizza",
+					cost:"$14.99",
+					descr:"Breaded chicken, ham, mozzarella, cheddar cheese, and sauce."
+				},
+				{
+					name:"Fajita Pizza",
+					cost:"$14.99",
+					descr:"Your choice of chicken or steak with green peppers and onions."
+				},
+				{
+					name:"Cheesesteak Deluxe Pizza",
+					cost:"$14.99",
+					descr:"Steak, American cheese, fried onions, fried green peppers, sauce, and mozzarella cheese."
+				},
+				{
+					name:"White Deluxe Pizza",
+					cost:"$14.99",
+					descr:""
+				},
+				{
+					name:"Chicken Bacon Ranch",
+					cost:"$14.99",
+					descr:"Olive oil, garlic, mozzarella cheese, ricotta, tomatoes, spinach, broccoli, and onions."
+				},
+				{
+					name:"Sicillian Pizza (large only)",
+					cost:"$14.99",
+					descr:""
+				}			
+			]
 		},
 		{
 			item: "stromboli",
@@ -178,7 +275,7 @@ $(document).ready( function () {
 		//markup var
 		var markup  = "";
 		//cache menu length
-		var l = Object.keys(menu).length;
+		var l = menu.length;
 		//loop throught object to populate
 		for( var i = 0; i < l; i++){
 			markup += "<div class='menuOption'><span>" + menu[i].item + "</span></div>";
@@ -189,4 +286,38 @@ $(document).ready( function () {
 	$("#delivery, #pickup").click( function () {
 		groups();
 	});
+
+	var ready = function () {
+		$(".menuOption").click( function () {
+			//fadeeIn and fadeOu the menu page for text change
+			$("#menuPage").fadeOut();
+			setTimeout( function () {
+				$("#menuPage").fadeIn();
+				$("#menuPage").html(markup);
+			}, 1000);
+			//var to hold the location of clicked option in the meun array
+			var location;
+			//get the selected option markup by searching the menu array
+			var match = $(this).children().html();
+			var l = menu.length;
+			for( var i = 0; i < l; i++){
+				if( menu[i].item === match ){
+					location = i;
+				}
+			}
+
+			var len = menu[location].options.length;
+			//init markup
+			var markup = "<div class='menuOptionListPosition'>";
+			for( var i = 0; i < len; i++){
+				markup += "<div class='menuOptionList'>";
+				markup += "<div class='price'>"+menu[location].options[i].cost+"</div>";
+				markup += "<div class=''><span class='itemdescr'>"+menu[location].options[i].name+"</span></div>";
+				//markup += "<div class=''>"+menu[location].options[i].descr+"</div>";
+				markup += "</div>";
+			}
+			markup += "</div>";
+		});
+	};
+	
 });
