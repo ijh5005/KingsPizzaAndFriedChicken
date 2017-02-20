@@ -319,5 +319,39 @@ $(document).ready( function () {
 			markup += "</div>";
 		});
 	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	///////////app animations/////////////////////////
+	$("#reviews").click( function () {
+		setTimeout( function () {
+			$(".dish").animate({
+				height: "20vh"
+			}, 100);
+		}, 1000);
+		$("#reviews").attr("data", "true");
+	});
+
+	$("#back").click( function () {
+		if($("#reviews").attr("data") === "true"){
+			setTimeout( function () {
+				$(".dish").animate({
+					height: "35vh"
+				}, 100);
+			}, 600);
+		}
+		$("#reviews").attr("data", "false");
+	})
 	
 });
