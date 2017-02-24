@@ -207,6 +207,87 @@ $(document).ready( function () {
 		{
 			item: "stromboli",
 			id: 2,
+			options: [
+				{
+					name: "Chicken Cheesesteak Stromboli",
+					cost: "$12.99",
+					descr: "With American cheese"
+				},	
+				{
+					name: "Broccoli Cheddar Stromboli",
+					cost: "$12.99",
+					descr: "Broccoli, cheddar, and mozzarella."
+				},	
+				{
+					name: "Chicken Cordon Bleu Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Florentina Stromboli",
+					cost: "$12.99",
+					descr: "Spinach, ricotta, tomatoes, and mozzarella."
+				},	
+				{
+					name: "Cheddar Supreme Stromboli",
+					cost: "$12.99",
+					descr: "Mozzarella, cheddar, bacon, ham, and onions."
+				},	
+				{
+					name: "Pepperoni and Mozzarella Cheese Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Meatball Sauce and Provolone Cheese Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Sausage and Mozzarella Cheese Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Ham and Provolone Cheese Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Veggie Stromboli",
+					cost: "$12.99",
+					descr: "Mushrooms, green peppers, onions, tomatoes, broccoli, spinach, and mozzarella."
+				},{
+					name: "Italian Stromboli",
+					cost: "$12.99",
+					descr: "Pepper ham, Genoa salami, capicola, and provolone."
+				},	
+				{
+					name: "Cheesesteak Stromboli",
+					cost: "$12.99",
+					descr: "With American cheese."
+				},	
+				{
+					name: "Buffalo Chicken Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Chicken Parmigiana Stromboli",
+					cost: "$12.99",
+					descr: ""
+				},
+				{
+					name: "Bacon Cheddar Cheeseburger Stromboli",
+					cost: "$12.99",
+					descr:""
+				},	
+				{
+					name: "Meat Lovers Stromboli",
+					cost: "$14.99",
+					descr:""
+				},		
+			]
 		},
 		{
 			item: "chicken",
@@ -215,18 +296,206 @@ $(document).ready( function () {
 		{
 			item: "burger bin",
 			id: 4,
+			options: [
+				{
+					name: "Hamburger Deluxe",
+					cost: "$5.99",
+					descr: "8 oz. burger served with lettuce, tomato and onion. Served with french fries and a pickle."
+				},
+				{
+					name: "Cheeseburger Deluxe",
+					cost: "$6.99",
+					descr: "8 oz. burger served with lettuce, tomato and onion. Served with french fries and a pickle."
+				},
+				{
+					name: "Bacon Cheeseburger",
+					cost: "$7.99",
+					descr: "8 oz. burger served with french fries and a pickle."
+				},
+				{
+					name: "Mushroom Cheeseburger",
+					cost: "$7.99",
+					descr: "8 oz. burger served with french fries and a pickle."
+				},
+				{
+					name: "Buffalo Burger Deluxe",
+					cost: "$7.99",
+					descr: "8 oz. burger with bleu cheese crumbles, lettuce, tomatoes, onions and hot sauce. Served with french fries and a pickle."
+				},
+				{
+					name: "Pizza Burger Deluxe",
+					cost: "$7.99",
+					descr: "8 oz. burger with mozzarella cheese and tomato sauce. Served with french fries and a pickle."
+				},
+				{
+					name: "Patty Melt",
+					cost: "$7.99",
+					descr: "8 oz. burger with Swiss and fried onions on rye. Served with french fries and a pickle."
+				},
+				{
+					name: "Texas Burger",
+					cost: "$8.99",
+					descr: "8 oz. burger with BBQ sauce and cheddar cheese. Served with french fries and a pickle."
+				},
+			]
 		},
 		{
 			item: "salad",
 			id: 5,
+			options: [
+				{
+					name: "Tossed Salad",
+					cost: "$5.99",
+					descr: "Mixed greens, tomatoes, cucumbers, onions, carrots, mozzarella, eggs and croutons."
+				},	
+				{
+					name: "Chicken Salad",
+					cost: "$6.99",
+					descr: "Served with sliced tomatoes, hard boiled eggs, green peppers, cucumbers and olives."
+				},	
+				{
+					name: "Tuna Salad",
+					cost: "$7.99",
+					descr: "Served with sliced tomato, hard boiled eggs, green peppers, cucumbers and olives."
+				},	
+				{
+					name: "Chef's Salad",
+					cost: "$7.99",
+					descr: "Turkey, ham and American cheese over tossed crisp greens with sliced hard-boiled eggs, tomatoes, green peppers and cucumbers."
+				},	
+				{
+					name: "Grilled Chicken Breast Salad",
+					cost: "$7.99",
+					descr: "Grilled chicken breast over crisp greens, hard-boiled eggs, tomatoes and vegetable garnish with ranch dressing."
+				},	
+				{
+					name: "Chicken Finger Salad",
+					cost: "$7.99",
+					descr: "Chicken fingers over crisp greens, hard-boiled eggs, tomatoes and vegetable garnish with ranch dressing."
+				},	
+				{
+					name: "Chicken Caesar Salad",
+					cost: "$8.99",
+					descr: "Grilled chicken over fresh romaine lettuce with croutons and Caesar dressing."
+				},	
+				{
+					name: "Shrimp Caesar Salad",
+					cost: "$9.99",
+					descr: "Shrimp over fresh romaine lettuce with croutons and Caesar dressing."
+				},	
+				{
+					name: "Buffalo Chicken Salad",
+					cost: "$8.99",
+					descr: "Chicken with hot sauce and bleu cheese crumbles over crisp greens, egg, green peppers and cucumbers."
+				},	
+				{
+					name: "Taco Salad",
+					cost: "$9.99",
+					descr: "Ground beef, shredded cheddar, black olives, salsa, sour cream and tortilla chips."
+				},	
+			]
 		},
 		{
 			item: "club",
 			id: 6,
+			options: [
+				{
+					name: "Turkey Club",
+					cost: "$6.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+				{
+					name: "BLT Club",
+					cost: "$6.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+				{
+					name: "Ham Club",
+					cost: "$6.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+				{
+					name: "Grilled Chicken Club",
+					cost: "$6.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+				{
+					name: "Chicken Salad Club",
+					cost: "$7.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+				{
+					name: "Tuna Salad Club",
+					cost: "$6.99",
+					descr: "Served with lettuce, tomato, bacon, mayo, chips and a pickle."
+				},	
+			]
 		},
 		{
 			item: "wraps",
 			id: 7,
+			options: [
+				{
+					name: "Chicken Caesar Wrap",
+					cost: "$7.99",
+					descr: "With romaine lettuce, tomatoes and Parmesan cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Tuna Salad Wrap",
+					cost: "$7.99",
+					descr: "With lettuce, tomatoes and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Chicken Salad Wrap",
+					cost: "$7.99",
+					descr: "With lettuce, tomatoes and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Turkey Wrap",
+					cost: "$7.99",
+					descr: "With lettuce, tomatoes and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Ham Wrap",
+					cost: "$7.99",
+					descr: "With lettuce, tomatoes and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Cheese Steak Wrap",
+					cost: "$7.99",
+					descr: "With sliced beef, lettuce, tomatoes, onions and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "BBQ Chicken Wrap",
+					cost: "$7.99",
+					descr: "With BBQ sauce, grilled chicken, American cheese, lettuce and tomatoes. Served with potato chips and pickles."
+				},
+				{
+					name: "Chicken BLT Wrap",
+					cost: "$7.99",
+					descr: "With breaded chicken, bacon, lettuce, tomatoes and mayonnaise. Served with potato chips and pickles."
+				},
+				{
+					name: "Chicken Finger Wrap",
+					cost: "$7.99",
+					descr: "With lettuce, tomatoes, ranch dressing and American cheese. Served with potato chips and pickles."
+				},
+				{
+					name: "Buffalo Chicken Wrap",
+					cost: "$7.99",
+					descr: "With breaded chicken, hot sauce, bleu cheese, lettuce and tomatoes. Served with potato chips and pickles."
+				},
+				{
+					name: "Chicken Cheesesteak Wrap",
+					cost: "$7.99",
+					descr: "With grilled chicken, American cheese, lettuce and tomatoes. Served with potato chips and pickles."
+				},
+				{
+					name: "Chicken Florentine",
+					cost: "$8.99",
+					descr: "Chicken, spinach, and provolane cheese"
+				},
+			]
 		},
 		{
 			item: "hoagies",
@@ -289,7 +558,7 @@ $(document).ready( function () {
 
 	var ready = function () {
 		$(".menuOption").click( function () {
-			//fadeeIn and fadeOu the menu page for text change
+			//fadeIn and fadeOut the menu page for text change
 			$("#menuPage").fadeOut();
 			setTimeout( function () {
 				$("#menuPage").fadeIn();
@@ -320,20 +589,9 @@ $(document).ready( function () {
 		});
 	};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 	///////////app animations/////////////////////////
+
+	/**********    reiew page    **********/
 	$("#reviews").click( function () {
 		setTimeout( function () {
 			$(".dish").animate({
@@ -352,6 +610,6 @@ $(document).ready( function () {
 			}, 600);
 		}
 		$("#reviews").attr("data", "false");
-	})
+	});
 	
 });

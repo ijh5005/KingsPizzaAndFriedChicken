@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="menuApp" ng-controller="menuCtrl" ng-cloak>
 <head>
 	<title>King Pizza and Fried Chicken</title>
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Pacifico" rel="stylesheet">
@@ -15,25 +15,13 @@
 
 	<div class="dish menuImg"></div>
 
-	<div class="banner"><span>King Pizza & Fried Chicken</span></div>
+	<div class="banner"><span>{{name}}</span></div>
 
-	<div id="select">
+	<div id="select" ng-controller="nav">
 		<div id="mainMenu" data="true">
-			<div id="delivery" class="option">
-				<div id="carIcon"></div>
-				<div>DELIVERY</div>
-			</div>
-			<div id="pickup" class="option">
-				<div id="pizzaIcon"></div>
-				<div>PICK UP</div>
-			</div>
-			<div id="location" class="option">
-				<div id="locationIcon"></div>
-				<div>LOCATION</div>
-			</div>
-			<div id="reviews" class="option" data="false">
-				<div id="reviewIcon"></div>
-				<div>REVIEWS</div>
+			<div ng-repeat="mainMenu in mainMenus" id="{{ mainMenu.type }}" class="option">
+				<div id="{{ mainMenu.icon }}" class="icon"></div>
+				<div>{{mainMenu.text}}</div>
 			</div>
 		</div> <!-- end menu -->
 
@@ -133,6 +121,8 @@
 	</div> <!-- end #select -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript" src="ngMenu.js"></script>
 </body>
 </html>

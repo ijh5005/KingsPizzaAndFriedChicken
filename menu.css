@@ -1,3 +1,11 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.block {
+	display: block;
+}
+
 body {
 	background-image: url(img/black.jpg);
 	background-repea: no-repeat;
@@ -106,10 +114,7 @@ body {
     width: 58vw;
 }
 
-#carIcon,
-#pizzaIcon,
-#locationIcon,
-#reviewIcon {
+.icon {
 	background-color: #CCC;
 	background-image: url(icon/car.png);
 	background-position: center; 
@@ -119,6 +124,10 @@ body {
 	height: 1.4em;
     margin: 0 0.5em 0 0;
     width: 1.4em;
+}
+
+#carIcon {
+	background-image: url(icon/car.png);
 }
 
 #pizzaIcon {
