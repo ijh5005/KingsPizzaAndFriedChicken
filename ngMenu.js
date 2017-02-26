@@ -80,6 +80,7 @@ app.controller("nav", function ($scope, $compile) {
 
 	$scope.backToMenu = function () {
 		$("#menuPage").animate({opacity:0}, 1000);
+		$("#infoBox").fadeOut("slow");
 		setTimeout( function () {
 			$("#menuPage").animate({opacity:1}, 1000);
 		}, 1000);

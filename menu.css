@@ -116,7 +116,6 @@ body {
 
 .icon {
 	background-color: #CCC;
-	background-image: url(icon/car.png);
 	background-position: center; 
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
@@ -287,6 +286,58 @@ body {
     width: 37vw;
 }
 
+#infoIcon {
+	background-image: url(icon/info.png);
+    left: 18.3em;
+	position: absolute;
+    top: 3.6em;
+}
+
+#infoTop {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#infoBox {
+    background-color: #000;
+    border-radius: 5px;
+    display: none;
+    height: 25em;
+    position: absolute;
+    margin: 0 auto;
+    top: 44em;
+    width: 99vw;
+    z-index: 10;
+}
+
+#xIcon {
+	background-image: url(icon/x.png);
+    background-size: 4em 4em;
+    height: 6em;
+    margin: 2em;
+    width: 6em;
+}
+
+#buy {
+    align-items: center;
+    border: 8px solid #CCC;
+    color: lightblue;
+    display: flex;
+    font-size: 4em;
+    height: 1.2em;
+    justify-content: center;
+    margin: 0.4em;
+    width: 1.6em;
+}
+
+#descrBox {
+    color: #ccc;
+    font-size: 3em;
+	line-height: 2;
+    padding: 0 1em;
+}
+
 .menuOption span {
 	font-size: 1.76em;
 }
@@ -308,6 +359,7 @@ body {
     justify-content: flex-start;
     margin: 0.25vh 0;
     padding: 0 1em;
+    position: relative;
     width: 77vw;
 }
 
