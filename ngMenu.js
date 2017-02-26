@@ -77,7 +77,6 @@ app.controller("nav", function ($scope, $compile) {
 	};
 
 	$scope.backToMenu = function () {
-		$(".dish").attr("class", "").addClass("dish menuImg");
 		$("#menuPage").animate({opacity:0}, 1000);
 		setTimeout( function () {
 			$("#menuPage").animate({opacity:1}, 1000);
