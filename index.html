@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="menuApp" ng-controller="menuCtrl" ng-cloak>
+<html ng-app="menuApp" ng-controller="menu" ng-cloak>
 <head>
 	<title>King Pizza and Fried Chicken</title>
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Pacifico" rel="stylesheet">
@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<div id="back"></div>
+	<div id="back" data="main" ng-controller="nav" ng-click='click($event)'></div>
 	<div id="checkout"></div>
 
 	<div class="dish menuImg"></div>
@@ -19,43 +19,29 @@
 
 	<div id="select" ng-controller="nav">
 		<div id="mainMenu" data="true">
-			<div ng-repeat="mainMenu in mainMenus" id="{{ mainMenu.type }}" class="option">
+			<div ng-repeat="mainMenu in mainMenus" id="{{ mainMenu.type }}" class="option" ng-click='click($event)'>
 				<div id="{{ mainMenu.icon }}" class="icon"></div>
 				<div>{{mainMenu.text}}</div>
 			</div>
 		</div> <!-- end menu -->
 
-		<div id="menuPage"></div>
+		<div id="menuPage" ng-controller="nav"></div>
 
-		<div id="locationPage">
+		<div id="locationPage" ng-controller="location">
 			<h2>LOCATION</h2>
-			<p>1432 E High St, Pottstown, PA 19464</p>
+			<p> {{location}} </p>
 			<h2>Contact</h2>
-			<p>(484) 624-4565</p>
+			<p> {{phone}} </p>
 			<h2>Hours</h2>
 			<div id="hoursPostion">
 				<div class="hoursList">
 					<ul>
-						<li>Saturday</li>
-						<li>Sunday</li>
-						<li>Monday</li>
-						<li>(President's Day)</li>
-						<li>Tuesday</li>
-						<li>Wednesday</li>
-						<li>Thursday</li>
-						<li>Friday</li>
+						<li ng-repeat="hours in open"> {{hours.day}} </li>
 					</ul>
 				</div>
 				<div class="hoursList">
 					<ul>
-						<li>10AM–11PM</li>
-						<li>10AM–10PM</li>
-						<li>10AM–10PM</li>
-						<li>Hours might differ</li>
-						<li>10AM–10PM</li>
-						<li>10AM–10PM</li>
-						<li>10AM–10PM</li>
-						<li>10AM–11PM</li>
+						<li ng-repeat="hours in open"> {{hours.time}} </li>
 					</ul>	
 				</div>
 			</div>

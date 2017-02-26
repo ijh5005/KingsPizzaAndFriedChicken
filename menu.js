@@ -1,105 +1,6 @@
 "use strict";
 
 $(document).ready( function () {
-	//navigation tree -> used to have navigation pages ready
-	var Track = {
-		delivery: {
-			current: "delivery",
-			previous: "mainMenu",
-			next: {
-				displayImgClass: "orderImg",
-				current: "menuPage",
-				previous: "mainMenu",
-			},
-		},
-		pickup: {
-			current: "pickup",
-			previous: "mainMenu",
-			next: {
-				displayImgClass: "orderImg",
-				current: "menuPage",
-				previous: "mainMenu",
-			},
-		},
-		location: {
-			current: "location",
-			previous: "mainMenu",
-			next: {
-				displayImgClass: "locationImg",
-				current: "locationPage",
-				previous: "mainMenu",
-			},
-		},
-		reviews: {
-			current: "reviews",
-			previous: "mainMenu",
-			next: {
-				displayImgClass: "reviewImg",
-				current: "reviewPage",
-				previous: "mainMenu",
-			},
-		}
-	};
-	//store current page info
-	var Branches = function(path) {
-		this.path = path;
-	};
-	var branch = new Branches("");
-	//navigation functionality
-	$(".option").click( function () {
-		//cache current
-		var currentPage =  $(this).attr("id");
-		$("#"+Track[branch.path + currentPage].previous+"").animate({
-			right: "100vw"
-		}, {
-			duration: 1000,
-			complete: function () {
-				//hide current and place it back to orginal position
-				$("#"+Track[branch.path + currentPage].previous+"").css("display", "none").css("right", 0);
-				//back button fadeIn
-				$("#back").fadeIn("slow");
-				//fade in appropriate page
-				$("#"+Track[branch.path + currentPage].next.current+"").fadeIn("slow");
-				//change display image
-				$(".dish").attr("class", "").addClass("dish "+Track[currentPage].next.displayImgClass);
-				setTimeout( function () {
-					//update branch.path
-					branch.path += currentPage + ".next.";
-					ready();
-				}, 1500);
-			}
-		}); // end: $("#"+Track[currentPage]).animate
-	});  // end: $(".option").click
-
-	//back button functionality
-	$("#back").click( function () {
-		//fadeout #select children
-		$("#select").children().fadeOut();
-		setTimeout( function () { 
-			//get previous page reference
-			//remove the ".next." from branch.path
-			var stripNext = branch.path.split(".");
-			//remove the last two array elements: "." and ""
-			stripNext.pop();
-			stripNext.pop();
-			//convert stripNext to a string
-			var string = stripNext.join("");
-			//set branch path and dishImg
-			branch.path = string;
-			console.log();
-			$("#"+branch.path+"").parent().fadeIn();
-			if ( $("#"+branch.path+"").parent().attr("id") === "mainMenu" ){
-				$("#mainMenu").attr("data", "true");
-			}
-			if ( $("#mainMenu").attr("data") === "true" ){
-				branch.path = "";
-				$(".dish").attr("class", "").addClass("dish menuImg");
-				//fade out back button
-				$("#back").fadeOut();
-
-			}
-		}, 1000);
-	});
 
 	var menu = [
 
@@ -554,10 +455,12 @@ $(document).ready( function () {
 
 	$("#delivery, #pickup").click( function () {
 		groups();
+		setTimeout( function() { ready() }, 1500);
 	});
 
 	var ready = function () {
 		$(".menuOption").click( function () {
+			$("#back").attr("data", "menu");
 			//fadeIn and fadeOut the menu page for text change
 			$("#menuPage").fadeOut();
 			setTimeout( function () {
