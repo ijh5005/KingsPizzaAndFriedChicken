@@ -43,7 +43,10 @@ app.controller("nav", function ($scope, $compile) {
 				//back button fadeIn
 				$("#back").fadeIn("slow");
 				//fade in appropriate page
-				$(next).fadeIn("slow");
+				$(next).fadeIn("slow").css("display", "flex")
+									  .css("flex-direction", "row")
+									  .css("justify-content", "center")
+									  .css("flex-wrap", "wrap");
 				//change display image
 				$(".dish").attr("class", "").addClass(img);
 			}
@@ -74,13 +77,10 @@ app.controller("nav", function ($scope, $compile) {
 	};
 
 	$scope.backToMenu = function () {
-		//fadeout current page
-		$("#select").children().fadeOut();
-		setTimeout( function () { 
-			$("#mainPage").fadeIn();
-			$(".dish").attr("class", "").addClass("dish menuImg");
-			//fade out back button
-			$("#back").fadeOut();
+		$(".dish").attr("class", "").addClass("dish menuImg");
+		$("#menuPage").animate({opacity:0}, 1000);
+		setTimeout( function () {
+			$("#menuPage").animate({opacity:1}, 1000);
 		}, 1000);
 	};
 
@@ -96,9 +96,11 @@ app.controller("nav", function ($scope, $compile) {
 			$scope.location();
 		} else if( target === "reviews" ){
 			$scope.reviews();
-		} else if( target === "back"){
+		} else if( target === "back" && $("#back").attr("data") === "main"){
 			$scope.backToMain();
-		} 
+		} else if( target === "back" && $("#back").attr("data") === "menu"){
+			$scope.backToMenu();
+		}
 	};
 
 });

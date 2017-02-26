@@ -462,9 +462,9 @@ $(document).ready( function () {
 		$(".menuOption").click( function () {
 			$("#back").attr("data", "menu");
 			//fadeIn and fadeOut the menu page for text change
-			$("#menuPage").fadeOut();
+			$("#menuPage").animate({opacity:0}, 1000);
 			setTimeout( function () {
-				$("#menuPage").fadeIn();
+				$("#menuPage").animate({opacity:1}, 1000);
 				$("#menuPage").html(markup);
 			}, 1000);
 			//var to hold the location of clicked option in the meun array
@@ -502,6 +502,7 @@ $(document).ready( function () {
 			}, 100);
 		}, 1000);
 		$("#reviews").attr("data", "true");
+		$(".banner").fadeOut("slow");
 	});
 
 	$("#back").click( function () {
@@ -513,6 +514,20 @@ $(document).ready( function () {
 			}, 600);
 		}
 		$("#reviews").attr("data", "false");
+		$(".banner").fadeIn("slow");
+	});
+
+	$("#checkout").click( function () {
+		alert("Checkout button in construction...");
+	});
+	/********** menu page ******************/
+	$("#back").click( function () {
+		if($("#back").attr("data") === "menu"){
+			setTimeout( function () {
+				groups();
+				$("#back").attr("data", "main");
+			}, 1000);
+		}
 	});
 	
 });
