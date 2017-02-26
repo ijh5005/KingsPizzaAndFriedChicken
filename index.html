@@ -28,21 +28,23 @@
 		<div id="menuPage" ng-controller="nav"></div>
 
 		<div id="locationPage" ng-controller="location">
-			<h2>LOCATION</h2>
-			<p> {{location}} </p>
-			<h2>Contact</h2>
-			<p> {{phone}} </p>
-			<h2>Hours</h2>
-			<div id="hoursPostion">
-				<div class="hoursList">
-					<ul>
-						<li ng-repeat="hours in open"> {{hours.day}} </li>
-					</ul>
-				</div>
-				<div class="hoursList">
-					<ul>
-						<li ng-repeat="hours in open"> {{hours.time}} </li>
-					</ul>	
+			<div id="topLiner">
+				<h2>LOCATION</h2>
+				<p> {{location}} </p>
+				<h2>Contact</h2>
+				<p> {{phone}} </p>
+				<h2>Hours</h2>
+				<div id="hoursPosition">
+					<div class="hoursList">
+						<ul>
+							<li ng-repeat="hours in open"> {{hours.day}} </li>
+						</ul>
+					</div>
+					<div class="hoursList">
+						<ul>
+							<li ng-repeat="hours in open"> {{hours.time}} </li>
+						</ul>	
+					</div>
 				</div>
 			</div>
 		</div> <!-- end #locationPage -->

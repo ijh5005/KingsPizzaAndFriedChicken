@@ -49,6 +49,8 @@ app.controller("nav", function ($scope, $compile) {
 									  .css("flex-wrap", "wrap");
 				//change display image
 				$(".dish").attr("class", "").addClass(img);
+				$("#locationPage").css("flex-direction", "column")
+								  .css("flex-wrap", "");
 			}
 		}); // end: $("#mainMenu").animate
 	};
