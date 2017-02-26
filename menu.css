@@ -330,7 +330,10 @@ body {
 		width: 17em;
 	}
 	.menuOption {
-		width: 7.5em;
+		width: 6.5em;
+	}
+	.menuOption span {
+	    font-size: 1.4em;
 	}
 	.menuOptionList {
 	    height: 3.5em;

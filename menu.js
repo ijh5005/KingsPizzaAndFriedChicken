@@ -525,6 +525,7 @@ $(document).ready( function () {
 		if($("#back").attr("data") === "menu"){
 			setTimeout( function () {
 				groups();
+				ready();
 				$("#back").attr("data", "main");
 			}, 1000);
 		}
