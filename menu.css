@@ -6,6 +6,10 @@
 	display: block;
 }
 
+html {
+	min-width: 900px;
+}
+
 body {
 	background-image: url(img/black.jpg);
 	background-repea: no-repeat;
@@ -288,7 +292,7 @@ body {
 
 #infoIcon {
 	background-image: url(icon/info.png);
-    left: 18.3em;
+    left: 77vw;
 	position: absolute;
     top: 1vh;
 }
@@ -306,7 +310,7 @@ body {
     height: 25em;
     position: absolute;
     margin: 0 auto;
-    top: 44em;
+    top: 35vh;
     width: 99vw;
     z-index: 10;
 }
@@ -382,9 +386,9 @@ body {
 
 
 
-@media (min-width: 1020px) {
+@media (min-width: 1000px) {
 	.dish {
-		width: 50em;
+		width: 800px;
 		background-size: 50em 35vh;
 		margin: 0 auto;
 	}
@@ -403,6 +407,9 @@ body {
 	.menuOptionList {
 	    height: 3.5em;
     	width: 15em;
+	}
+	#infoIcon {
+		left: 15em;
 	}
 	#locationPage, #reviewPage {
 		width: 18em;
